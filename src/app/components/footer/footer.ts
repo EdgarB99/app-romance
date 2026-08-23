@@ -1,0 +1,2 @@
+import { ChangeDetectionStrategy, Component, signal } from '@angular/core'; import { COUPLE_CONFIG } from '../../config/couple.config';
+@Component({selector:'app-footer',changeDetection:ChangeDetectionStrategy.OnPush,templateUrl:'./footer.html',styleUrl:'./footer.scss'}) export class Footer{readonly config=COUPLE_CONFIG;readonly taps=signal(0);readonly found=signal(false);tap(){this.taps.update(v=>v+1);if(this.taps()>=5){this.found.set(true);this.taps.set(0);setTimeout(()=>this.found.set(false),3500)}}}

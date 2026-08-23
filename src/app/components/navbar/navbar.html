@@ -1,0 +1,8 @@
+<nav [class.scrolled]="scrolled()" aria-label="Navegación principal">
+  <button class="brand" (click)="go('inicio')" aria-label="Volver al inicio">M <span>♥</span> E</button>
+  <button class="menu" (click)="open.set(!open())" [attr.aria-expanded]="open()" aria-label="Abrir menú"><span></span><span></span></button>
+  <div class="links" [class.open]="open()">
+    <button (click)="go('inicio')">Inicio</button><button (click)="go('historia')">Historia</button>
+    <button (click)="go('fotos')">Fotos</button><button (click)="go('favoritas')">Favoritas</button><button (click)="go('nosotros')">Nosotros</button>
+  </div>
+</nav>

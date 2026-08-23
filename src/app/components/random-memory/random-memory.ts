@@ -1,0 +1,2 @@
+import { ChangeDetectionStrategy, Component, signal } from '@angular/core'; import { PHOTOS } from '../../data/photos.data';
+@Component({selector:'app-random-memory',changeDetection:ChangeDetectionStrategy.OnPush,templateUrl:'./random-memory.html',styleUrl:'./random-memory.scss'}) export class RandomMemory{readonly memory=signal(PHOTOS[0]);readonly version=signal(0);pick(){let next=this.memory();while(PHOTOS.length>1&&next.id===this.memory().id)next=PHOTOS[Math.floor(Math.random()*PHOTOS.length)];this.memory.set(next);this.version.update(v=>v+1)}}

@@ -1,0 +1,2 @@
+import { ChangeDetectionStrategy, Component } from '@angular/core'; import { COUPLE_CONFIG } from '../../config/couple.config';
+@Component({ selector:'app-hero', changeDetection:ChangeDetectionStrategy.OnPush, templateUrl:'./hero.html', styleUrl:'./hero.scss' }) export class Hero { readonly config=COUPLE_CONFIG; scroll():void{document.getElementById('tiempo')?.scrollIntoView({behavior:'smooth'});} }

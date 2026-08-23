@@ -1,0 +1,2 @@
+import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core'; import { RelationshipService } from '../../services/relationship.service';
+@Component({selector:'app-relationship-counter',changeDetection:ChangeDetectionStrategy.OnPush,templateUrl:'./relationship-counter.html',styleUrl:'./relationship-counter.scss'}) export class RelationshipCounter implements OnInit,OnDestroy{ constructor(readonly relationship:RelationshipService){} ngOnInit(){this.relationship.start()} ngOnDestroy(){this.relationship.stop()} }
