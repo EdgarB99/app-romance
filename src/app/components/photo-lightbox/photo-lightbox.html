@@ -1,1 +1,14 @@
-<div class="backdrop" role="dialog" aria-modal="true" [attr.aria-label]="photo.title" (click)="closed.emit()" (touchstart)="touchStart($event)" (touchend)="touchEnd($event)"><button class="close" (click)="closed.emit()" aria-label="Cerrar visor">×</button><button class="arrow left" (click)="$event.stopPropagation();prev()" aria-label="Fotografía anterior">‹</button><figure (click)="$event.stopPropagation()"><div class="image"><img [src]="photo.src" [alt]="photo.alt"><span>{{index+1}} / {{photos.length}}</span></div><figcaption><p class="meta">{{photo.date}} @if(photo.location){ · {{photo.location}}}</p><h2>{{photo.title}}</h2><p>{{photo.description}}</p></figcaption></figure><button class="arrow right" (click)="$event.stopPropagation();next()" aria-label="Fotografía siguiente">›</button></div>
+<div class="backdrop" role="dialog" aria-modal="true" [attr.aria-label]="photo.title" (click)="closed.emit()"
+    (touchstart)="touchStart($event)" (touchend)="touchEnd($event)"><button class="close" (click)="closed.emit()"
+        aria-label="Cerrar visor">×</button><button class="arrow left" (click)="$event.stopPropagation();prev()"
+        aria-label="Fotografía anterior">‹</button>
+    <figure (click)="$event.stopPropagation()">
+        <div class="image"><img [src]="photo.src" [alt]="photo.alt"><span>{{index+1}} / {{photos.length}}</span></div>
+        <figcaption>
+            <p class="meta">{{photo.date}} @if(photo.location){ · {{photo.location}}}</p>
+            <h2>{{photo.title}}</h2>
+            <p>{{photo.description}}</p>
+        </figcaption>
+    </figure><button class="arrow right" (click)="$event.stopPropagation();next()"
+        aria-label="Fotografía siguiente">›</button>
+</div>

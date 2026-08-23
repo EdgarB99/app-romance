@@ -1,1 +1,15 @@
-<section id="fotos" class="section gallery-section"><div class="heading"><p class="eyebrow">Nuestro pequeño archivo</p><h2>Nuestros momentos</h2><p>Un pequeño lugar para guardar todos esos momentos que no queremos olvidar.</p></div><div class="filters" aria-label="Filtrar fotografías">@for(category of categories;track category){<button [class.active]="active()===category" (click)="active.set(category)">{{category}}</button>}</div><div class="masonry">@for(photo of filtered();track photo.id){<button class="photo" (click)="open(photo)" [attr.aria-label]="'Abrir '+photo.title"><img [src]="photo.src" [alt]="photo.alt" loading="lazy"><span class="shade"></span>@if(photo.favorite){<span class="heart" aria-label="Favorita">♥</span>}<span class="info"><small>{{photo.date}} · {{photo.location}}</small><strong>{{photo.title}}</strong></span></button>}</div></section>@if(selected()!==null){<app-photo-lightbox [photos]="filtered()" [index]="selected()!" (indexChange)="selected.set($event)" (closed)="close()"/>}
+<section id="fotos" class="section gallery-section">
+    <div class="heading">
+        <p class="eyebrow">Nuestro pequeño archivo</p>
+        <h2>Nuestros momentos</h2>
+        <p>Un pequeño lugar para guardar todos esos momentos que no queremos olvidar.</p>
+    </div>
+    <div class="filters" aria-label="Filtrar fotografías">@for(category of categories;track category){<button
+            [class.active]="active()===category" (click)="active.set(category)">{{category}}</button>}</div>
+    <div class="masonry">@for(photo of filtered();track photo.id){<button class="photo" (click)="open(photo)"
+            [attr.aria-label]="'Abrir '+photo.title"><img [src]="photo.src" [alt]="photo.alt" loading="lazy"><span
+                class="shade"></span>@if(photo.favorite){<span class="heart" aria-label="Favorita">♥</span>}<span
+                class="info"><small>{{photo.date}} ·
+                    {{photo.location}}</small><strong>{{photo.title}}</strong></span></button>}</div>
+</section>@if(selected()!==null){<app-photo-lightbox [photos]="filtered()" [index]="selected()!"
+    (indexChange)="selected.set($event)" (closed)="close()" />}
