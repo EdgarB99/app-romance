@@ -1,6 +1,6 @@
 export const LOVE_REASONS = [
-  'Que podemos reírnos hasta de las cosas más simples.',
-  'Las conversaciones que terminan durando mucho más de lo planeado.',
+  'Mirarnos a los ojos, ese momento es hermoso.',
+  'Poder pasar un buen rato juntos y no querer que se acabe.',
   'Todos esos momentos normales que terminan convirtiéndose en recuerdos.',
-  'Seguir descubriendo cosas nuevas del otro.'
+  'Tus besos y abrazos, me hacen sentir muy feliz.',
 ] as const;

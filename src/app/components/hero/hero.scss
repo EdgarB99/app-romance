@@ -5,7 +5,7 @@
     place-items: center;
     text-align: center;
     position: relative;
-    background: linear-gradient(180deg, #07050755 0%, #09060899 60%, #0d0a0c 100%), url('/assets/photos/mye2.0.jpg') center/cover fixed;
+    background: linear-gradient(180deg, #07050755 0%, #09060899 60%, #0d0a0c 100%), var(--hero-image) center/cover fixed;
     overflow: hidden
 }
 

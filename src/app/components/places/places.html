@@ -1,1 +1,13 @@
-<section class="section places"><div class="heading"><p class="eyebrow">Nuestra geografía</p><h2>Lugares que ya son parte de nuestra historia</h2></div><div class="cards">@for(place of places;track place.id){<article><img [src]="place.image" [alt]="place.name+', '+place.city" loading="lazy"><div><small>{{place.city}}</small><h3>{{place.name}}</h3><p>{{place.description}}</p></div></article>}</div></section>
+<!-- <section *ngIf="false" class="section places">
+    <div class="heading">
+        <p class="eyebrow">Nuestra geografía</p>
+        <h2>Lugares que ya son parte de nuestra historia</h2>
+    </div>
+    <div class="cards">@for(place of places;track place.id){<article><img [src]="place.image"
+                [alt]="place.name+', '+place.city" loading="lazy">
+            <div><small>{{place.city}}</small>
+                <h3>{{place.name}}</h3>
+                <p>{{place.description}}</p>
+            </div>
+        </article>}</div>
+</section> -->
